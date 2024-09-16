@@ -1,0 +1,151 @@
+:root {
+    font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    overflow-y: scroll;
+}
+
+.change-image-btn {
+    transition: all 100ms
+}
+
+.hero-image .change-image-btn {
+    opacity: 0;
+}
+
+.hero-image:hover .change-image-btn {
+    opacity: 1;
+}
+
+[contenteditable],
+[contenteditable]:focus {
+    outline: 0px solid transparent;
+}
+
+
+[contenteditable]:empty:before {
+    content: attr(data-placeholder);
+    pointer-events: none;
+    color: rgb(175, 175, 175)
+}
+
+
+
+.emoji-container {
+    cursor: pointer;
+}
+
+.emoji-bg {
+    border-radius: 8px;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+
+.emoji-container:hover .emoji-bg {
+    opacity: 1;
+    backdrop-filter: blur(1px) !important;
+    background-color: rgb(233 236 239 / 50%) !important;
+}
+
+.emoji-item {
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    z-index: 10;
+
+}
+
+
+em-emoji-picker {
+    width: 100%;
+    height: 400px;
+    --shadow: none;
+    --font-family: inherit;
+    --font-size: 0.9rem;
+    --rgb-background: none;
+    --border-radius: none;
+}
+
+.myNavLink:not([data-active]) {
+    color: var(--mantine-color-gray-6);
+}
+
+.myNavLink:is([data-active]) {
+    color: var(--mantine-color-gray-8);
+}
+
+.myNavLink:hover {
+    background: var(--mantine-color-gray-2);
+}
+
+
+.mantine-NavLink-section {
+    margin-inline-end: var(--mantine-spacing-xs);
+}
+
+
+.my-scrollbar::-webkit-scrollbar {
+    width: 8px;
+}
+
+.my-scrollbar::-webkit-scrollbar-track {
+    background: #f7f7f5;
+    border-radius: 10px;
+}
+
+.my-scrollbar::-webkit-scrollbar-thumb {
+    background: var(--mantine-color-gray-4);
+    border-radius: 10px;
+}
+
+.my-scrollbar::-webkit-scrollbar-thumb:hover {
+    background: var(--mantine-color-gray-5);
+}
+
+.tag-input .mantine-TagsInput-input {
+    border: none;
+}
+
+.note-card {
+    box-shadow: none;
+    transition: all 150ms;
+    cursor: pointer;
+}
+
+.note-card-force-hover,
+.note-card:hover {
+    box-shadow: var(--paper-shadow);
+    transform: translateY(-2px);
+    transition: all 150ms;
+    cursor: pointer;
+}
+
+.notes-grid {
+    grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+    gap: 12px
+}
+.note-card .preview *,
+.note-card-force-hover .preview *
+ {
+    margin: 0 ;
+}
+
+.list-table-item{
+    cursor: pointer;
+}
+.list-table-item:active{
+    background: var(--mantine-color-gray-2);
+}
+.list-table-item:hover .icon-open{
+    visibility:visible !important;
+
+}
